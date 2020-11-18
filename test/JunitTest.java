@@ -1,5 +1,5 @@
-package ex1;
 
+import ex1.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -56,22 +56,22 @@ class JunitTest {
         graph2.init(graph);
         Assertions.assertTrue(graph2.isConnected());
 
-}
-@Test
+    }
+    @Test
     public void PQcheck() {
-    PriorityQueue<node_info> PQ = new PriorityQueue<node_info>();
-    graph.addNode(1);
-    graph.addNode(2);
-    graph.addNode(3);
-    graph.getNode(1).setTag(5);
-    graph.getNode(2).setTag(10);
-    graph.getNode(3).setTag(2);
-    PQ.offer(graph.getNode(1));
-    PQ.offer(graph.getNode(2));
-    PQ.offer(graph.getNode(3));
-    Assertions.assertEquals(PQ.poll().getKey(), 3);
-    Assertions.assertEquals(PQ.poll().getKey(), 1);
-}
+        PriorityQueue<node_info> PQ = new PriorityQueue<node_info>();
+        graph.addNode(1);
+        graph.addNode(2);
+        graph.addNode(3);
+        graph.getNode(1).setTag(5);
+        graph.getNode(2).setTag(10);
+        graph.getNode(3).setTag(2);
+        PQ.offer(graph.getNode(1));
+        PQ.offer(graph.getNode(2));
+        PQ.offer(graph.getNode(3));
+        Assertions.assertEquals(PQ.poll().getKey(), 3);
+        Assertions.assertEquals(PQ.poll().getKey(), 1);
+    }
     @Test
     public void Dijkstra(){
         graph.addNode(0);
@@ -180,8 +180,8 @@ class JunitTest {
         graph.connect(2,3,2);
         graph.connect(3,4,1);
 
-       weighted_graph_algorithms graph2 = new WGraph_Algo();
-       graph2.init(graph);
+        weighted_graph_algorithms graph2 = new WGraph_Algo();
+        graph2.init(graph);
         graph2.save("Save.txt");
 
 
