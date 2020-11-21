@@ -1,10 +1,10 @@
+package ex1.tests;
 
-import ex1.*;
+import ex1.src.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.LinkedList;
-import java.util.List;
 import java.util.PriorityQueue;
 
 class JunitTest {
